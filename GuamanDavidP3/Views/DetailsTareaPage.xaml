@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuamanDavidP3.Views.DetailsTareaPage"
+             Title="DetailsTareaPage">
+    <VerticalStackLayout>
+        <Label x:Name="TituloTarea"
+               Text="Titulo de la tarea"
+               FontSize="32"
+               HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Descripción: "
+                    FontSize="18"/>
+            <Label x:Name="DescripcionTarea"
+                    Text="Descripcion"
+                    FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Estado:"
+                    FontSize="18"/>
+            <Label x:Name="EstadoTarea"
+                    Text="Estadado"
+                    FontSize="18"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Borrar"
+                Clicked="OnClickBorrar"
+                FontSize="20"
+                Margin="5"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Red"/>
+            <Button Text="Editar"
+                Clicked="OnClickEditar"
+                FontSize="20"
+                Margin="5"
+                HorizontalOptions="FillAndExpand"
+                TextColor="Black"
+                BackgroundColor="Orange"/>
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

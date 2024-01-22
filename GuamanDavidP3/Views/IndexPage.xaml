@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuamanDavidP3.Views.IndexPage"
+             Title="Index">
+    <VerticalStackLayout>
+        <Button 
+            Text="Ver Tareas" 
+            Clicked="ShowTareas" 
+            FontSize="Body"
+            BackgroundColor="Bisque"
+            Margin="1, 0, 0, 1"
+            />
+        <Button 
+            Text="Agregar Tarea" 
+            Clicked="AddTarea" 
+            FontSize="Body"
+            BackgroundColor="Bisque"
+            Margin="1, 0, 0, 1"
+            />
+    </VerticalStackLayout>
+</ContentPage>
