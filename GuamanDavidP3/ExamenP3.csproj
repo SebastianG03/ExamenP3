@@ -5,17 +5,17 @@
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
-		<OutputType>Exe</OutputType>
-		<RootNamespace>GuamanDavidP3</RootNamespace>
+		<OutputType>ExamenP3</OutputType>
+		<RootNamespace>ExamenP3</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>GuamanDavidP3</ApplicationTitle>
+		<ApplicationTitle>ExamenP3</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.guamandavidp3</ApplicationId>
+		<ApplicationId>com.companyname.examenp3</ApplicationId>
 		<ApplicationIdGuid>b69d5649-8f46-4cc3-b38c-cbe8014f8e69</ApplicationIdGuid>
 
 		<!-- Versions -->
