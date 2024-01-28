@@ -12,8 +12,8 @@ namespace GuamanDavidP3.Models
     public class Tarea
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Status { get; set; }
-        public string Description { get; set; }
+        public string Nombre { get; set; }
+        public string Estado { get; set; }
+        public string Descripcion { get; set; }
     }
 }

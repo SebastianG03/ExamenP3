@@ -22,9 +22,9 @@ public partial class AddTareaPage : ContentPage
             Tarea tarea = new Tarea
             {
                 Id = 0,
-                Title = Nombre.Text,
-                Status = Estado.Text,
-                Description = Descripcion.Text
+                Nombre = Nombre.Text,
+                Estado = Estado.Text,
+                Descripcion = Descripcion.Text
             };
 
             await App.service.PostTarea(tarea);

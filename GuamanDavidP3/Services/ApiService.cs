@@ -23,41 +23,6 @@ namespace GuamanDavidP3.Services
         }
 
 
-        public async Task<bool> DeleteProducto(int Id)
-        {
-            var response = await _httpClient.DeleteAsync($"/api/Producto/{Id}");
-            if (response.StatusCode == HttpStatusCode.NoContent)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public async Task<Tarea> GetTarea(int Id)
-        {
-            var response = await _httpClient.GetAsync($"/api/Tarea/{Id}");
-            if (response.IsSuccessStatusCode)
-            {
-                var json_response = await response.Content.ReadAsStringAsync();
-                Tarea tarea = JsonConvert.DeserializeObject<Tarea>(json_response);
-                return tarea;
-            }
-            return new Tarea();
-        }
-
-        public async Task<List<Tarea>> GetTareas()
-        {
-            var response = await _httpClient.GetAsync("/api/Tarea");
-            if (response.IsSuccessStatusCode)
-            {
-                var json_response = await response.Content.ReadAsStringAsync();
-                List<Tarea> productos = JsonConvert.DeserializeObject<List<Tarea>>(json_response);
-                return productos;
-            }
-            return new List<Tarea>();
-
-        }
-
         public async Task<Tarea> PostTarea(Tarea tarea)
         {
             var content = new StringContent(JsonConvert.SerializeObject(tarea), Encoding.UTF8, "application/json");
@@ -71,10 +36,9 @@ namespace GuamanDavidP3.Services
             return new Tarea();
         }
 
-        public async Task<Tarea> PutProducto(int Id, Tarea tarea)
+        public async Task<Tarea> BuscarTarea(string nombre, string estado)
         {
-            var content = new StringContent(JsonConvert.SerializeObject(tarea), Encoding.UTF8, "application/json");
-            var response = await _httpClient.PutAsync($"/api/Tarea/{Id}", content);
+            var response = await _httpClient.GetAsync($"/api/Tarea/{nombre}/{estado}");
             if (response.IsSuccessStatusCode)
             {
                 var json_response = await response.Content.ReadAsStringAsync();

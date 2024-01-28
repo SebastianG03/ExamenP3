@@ -9,7 +9,7 @@ public partial class IndexPage : ContentPage
 
     private static async void ShowTareas(object sender, EventArgs e)
     {
-        await App.Current.MainPage.Navigation.PushAsync(new ListTareaPage());
+        await App.Current.MainPage.Navigation.PushAsync(new DetailsTareaPage());
     }
 
     private static async void AddTarea(object sender, EventArgs e)

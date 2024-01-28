@@ -5,7 +5,7 @@
              Title="Index">
     <VerticalStackLayout>
         <Button 
-            Text="Ver Tareas" 
+            Text="Buscar Tareas" 
             Clicked="ShowTareas" 
             FontSize="Body"
             BackgroundColor="Bisque"
